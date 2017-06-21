@@ -13,13 +13,13 @@
     <context:annotation-config />
 
     <!-- Component scan to find all Spring components -->
-    <context:component-scan base-package="org.sch.issecurity.iam.tools.PSContractorLoader" />
+    <context:component-scan base-package="org.sch.issecurity.iam.tools.ACMetricsLoader" />
 
 
     <!-- Data source - connect to a MySQL instance running on the local machine -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-        <property name="url" value="jdbc:sqlserver://LPFORDIAMORA02:1433;DatabaseName=ADUsers;"/>
+        <property name="url" value="jdbc:sqlserver://LPFORDIAMORA02:1433;DatabaseName=ACOperation;"/>
         <property name="username" value="IAMDEV"/>
         <property name="password" value="admin123"/>
     </bean>
@@ -58,13 +58,13 @@
 
 
     <!-- Reader bean for our simple CSV example -->
-    <bean id="contractorReader" class="org.springframework.batch.item.file.FlatFileItemReader" scope="step">
+    <bean id="workItemReader" class="org.springframework.batch.item.file.FlatFileItemReader" scope="step">
 
-        <property name="resource" value="file:input/contractor_test.csv" />
+        <property name="resource" value="file:input/workItem_rpt.csv" />
 
 
         <!-- Skip the first line of the file because this is the header that defines the fields -->
-        <property name="linesToSkip" value="1" />
+        <property name="linesToSkip" value="0" />
 
         <!-- Defines how we map lines to objects -->
         <property name="lineMapper">
@@ -75,23 +75,23 @@
                     <bean class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
 
                         <!-- Names of the CSV columns -->
-                        <property name="names" value="Person ID,Effective Date,First Name,Middle Name,Last Name,Status,Phone,Address 1,Address 2,City,State,Postal,Country,Manager ID,Manager Name,Department,Department Descr,Location,Location Descr,Email ID,Purchase Order,Job Title,Contract Begin Date,Contract End Date,Vendor ID,Vendor Name,Previously Employed by Company,AD ID,Created By,Created DTTM,Last updated By,Comment" />
+                        <property name="names" value="tranDate,analystFirstName,SNOWID,AD_UC,AD_OPER,Exchange_UC,Exchange_OPER,Lync_UC,Lync_OPER,Box_UC,Box_OPER,ShareDrive_UC,ShareDrive_OPER,ShareMailbox_UC,ShareMailbox_OPER,EPIC_UC,EPIC_OPER,Cerner_UC,Cerner_OPER,Kronos_UC,Kronos_OPER,AccessHR_UC,AccessHR_OPER,FSCM_UC,FSCM_OPER,OnBase_UC,OnBase_OPER,MDPortal_UC,MDPortal_OPER,Haiku_UC,Haiku_OPER,Voalte_UC,Voalte_OPER,GRASP_UC,GRASP_OPER,Passport_UC,Passport_OPER,Payor_UC,Payor_OPER,Analytics_UC,Analytics_OPER,FundsFlow_UC,FundsFlow_OPER,Lane_UC,Lane_OPER,FANSOS_UC,FANSOS_OPER,Zirmed_UC,Zirmed_OPER,Emdeon_UC,Emdeon_OPER,LogMeIn_UC,LogMeIn_OPER,ResQ_UC,ResQ_OPER,VersusRTLS_UC,VersusRTLS_OPER,Meditech_UC,Meditech_OPER,MCCM_UC,MCCM_OPER,ExercisePro_UC,ExercisePro_OPER,iCares_UC,iCares_OPER,Connexall_UC,Connexall_OPER,Vocera_UC,Vocera_OPER,MyChild_UC,MyChild_OPER,Qualtrics_UC,Qualtrics_OPER,Syngo_UC,Syngo_OPER,Teamsite_UC,Teamsite_OPER,Wordpress_UC,Wordpress_OPER,Server_UC,Server_OPER,TrackCore_UC,TrackCore_OPER,VHI_UC,VHI_OPER,SharePoint_UC,SharePoint_OPER,TSI_UC,TSI_OPER,EPSi_UC,EPSi_OPER,Tableau_UC,Tableau_OPER,Getwell_UC,Getwell_OPER,GotoMeeting_UC,GotoMeeting_OPER,SNOW_UC,SNOW_OPER"></property>
                     </bean>
                 </property>
                 
                 <property name="fieldSetMapper">
-                    <bean class="org.sch.issecurity.iam.tools.PSContractorLoader.reader.ContractorFieldSetMapper" />
+                    <bean class="org.sch.issecurity.iam.tools.ACMetricsLoader.reader.WorkItemFieldSetMapper" />
                 </property>
             </bean>
         </property>
     </bean>
 
-    <bean id="contractorWriter" class="org.sch.issecurity.iam.tools.PSContractorLoader.writer.ContractorItemWriter" />
+    <bean id="workItemWriter" class="org.sch.issecurity.iam.tools.ACMetricsLoader.writer.WorkItemItemWriter" />
 
-    <bean id="contractorProcessor" class="org.sch.issecurity.iam.tools.PSContractorLoader.processor.ContractorItemProcessor" />
+    <bean id="workItemProcessor" class="org.sch.issecurity.iam.tools.ACMetricsLoader.processor.WorkItemItemProcessor" />
 
-    <bean id="archiveFileTasklet" class="org.sch.issecurity.iam.tools.PSContractorLoader.tasklet.ArchiveProductImportFileTasklet" scope="step">
-        <property name="inputFile" value=".\input\contractor_test.csv" />
+    <bean id="archiveFileTasklet" class="org.sch.issecurity.iam.tools.ACMetricsLoader.tasklet.ArchiveProductImportFileTasklet" scope="step">
+        <property name="inputFile" value=".\input\workItem_rpt.csv" />
     </bean>
 
 </beans>
