@@ -64,7 +64,7 @@
 
 
         <!-- Skip the first line of the file because this is the header that defines the fields -->
-        <property name="linesToSkip" value="0" />
+        <property name="linesToSkip" value="1" />
 
         <!-- Defines how we map lines to objects -->
         <property name="lineMapper">

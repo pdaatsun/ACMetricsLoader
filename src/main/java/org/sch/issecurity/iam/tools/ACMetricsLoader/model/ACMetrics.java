@@ -15,6 +15,8 @@ public class ACMetrics {
     int numOfUsers;
     Date uploadDate;
 
+    public ACMetrics() {}
+
     public ACMetrics(Date tranDate, int analystID, String SNOWID, int appID, int operationID, int numOfUsers, Date uploadDate) {
         this.tranDate = tranDate;
         this.analystID = analystID;
