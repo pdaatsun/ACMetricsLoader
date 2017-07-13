@@ -46,7 +46,19 @@ public class WorkItemFieldSetMapper implements FieldSetMapper<WorkItem>
         workItem.setVoalte_UC(fieldSet.readString( "Voalte_UC" ));
         workItem.setGRASP_UC(fieldSet.readString( "GRASP_UC" ));
         workItem.setPassport_UC(fieldSet.readString( "Passport_UC" ));
-        workItem.setPayor_UC(fieldSet.readString( "Payor_UC" ));
+        if ((fieldSet.readString("Payor_UC") != null) && (fieldSet.readString("Payor_UC").length() > 0)) {
+            if ((fieldSet.readString("Payor_SC") != null) && (fieldSet.readString("Payor_SC").length() > 0)) {
+                try {
+                    int payorUC = Integer.parseInt(fieldSet.readString("Payor_UC"));
+                    int payorSC = Integer.parseInt(fieldSet.readString("Payor_SC"));
+                    workItem.setPayor_UC(String.valueOf(payorUC * payorSC));
+                } catch (Exception e) {
+                    workItem.setPayor_UC(null);
+                }
+            } else {
+                workItem.setPayor_UC(fieldSet.readString( "Payor_UC" ));
+            }
+        }
         workItem.setAnalytics_UC(fieldSet.readString( "Analytics_UC" ));
         workItem.setFundsFlow_UC(fieldSet.readString( "FundsFlow_UC" ));
         workItem.setLane_UC(fieldSet.readString( "Lane_UC" ));
