@@ -11,6 +11,7 @@ GO
 DROP TABLE [dbo].[ACMetrics];
 
 CREATE TABLE [dbo].[ACMetrics](
+  [acmID] [int] IDENTITY(1,1) NOT NULL,
 	[tranDate] [date] NOT NULL,
 	[analystID] [int] NOT NULL,
 	[SNOWID] [varchar](256) NOT NULL,
@@ -18,17 +19,13 @@ CREATE TABLE [dbo].[ACMetrics](
 	[operationID] [int] NOT NULL,
 	[numOfUsers] [int] NULL,
 	[uploadDate] [date] NULL,
- CONSTRAINT [PK_ACMetrics] PRIMARY KEY CLUSTERED
+ CONSTRAINT [PK_ACMetrics_acmID] PRIMARY KEY CLUSTERED
 (
-	[tranDate] ASC,
-	[analystID] ASC,
-	[SNOWID] ASC,
-	[appID] ASC,
-	[operationID] ASC
+	[acmID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
- CONSTRAINT FK_ACMetrics_analystID FOREIGN KEY (analystID) REFERENCES Analyst (analystID),
- CONSTRAINT FK_ACMetrics_appID FOREIGN KEY (appID) REFERENCES Application (appID),
- CONSTRAINT FK_ACMetrics_operationID FOREIGN KEY (analystID) REFERENCES Operation (operationID),
+ CONSTRAINT FK_ACMetrics_acmID_analystID FOREIGN KEY (analystID) REFERENCES Analyst (analystID),
+ CONSTRAINT FK_ACMetrics_acmID_appID FOREIGN KEY (appID) REFERENCES Application (appID),
+ CONSTRAINT FK_ACMetrics_acmID_operationID FOREIGN KEY (analystID) REFERENCES Operation (operationID),
 ) ON [PRIMARY]
 
 GO

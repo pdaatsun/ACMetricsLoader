@@ -36,6 +36,7 @@ public class WorkItemFieldSetMapper implements FieldSetMapper<WorkItem>
         workItem.setShareDrive_UC(fieldSet.readString( "ShareDrive_UC" ));
         workItem.setShareMailbox_UC(fieldSet.readString( "ShareMailbox_UC" ));
         workItem.setEPIC_UC(fieldSet.readString( "EPIC_UC" ));
+        workItem.setSHCPRISM_UC(fieldSet.readString( "SHCPRISM_UC" ));
         workItem.setCerner_UC(fieldSet.readString( "Cerner_UC" ));
         workItem.setKronos_UC(fieldSet.readString( "Kronos_UC" ));
         workItem.setAccessHR_UC(fieldSet.readString( "AccessHR_UC" ));
@@ -89,6 +90,12 @@ public class WorkItemFieldSetMapper implements FieldSetMapper<WorkItem>
         workItem.setGetwell_UC(fieldSet.readString( "Getwell_UC" ));
         workItem.setGotoMeeting_UC(fieldSet.readString( "GotoMeeting_UC" ));
         workItem.setSNOW_UC(fieldSet.readString( "SNOW_UC" ));
+        workItem.setBabySentry_UC(fieldSet.readString( "BabySentry_UC" ));
+        workItem.setAvayaCMS_UC(fieldSet.readString( "AvayaCMS_UC" ));
+        workItem.setAGFA_UC(fieldSet.readString( "AGFA_UC" ));
+        workItem.setVoxida_UC(fieldSet.readString( "Voxida_UC" ));
+        workItem.setTwentytwoMile_UC(fieldSet.readString( "TwentytwoMile_UC" ));
+
         workItem.setAD_OPER(fieldSet.readString( "AD_OPER" ));
         workItem.setExchange_OPER(fieldSet.readString( "Exchange_OPER" ));
         workItem.setLync_OPER(fieldSet.readString( "Lync_OPER" ));
@@ -96,6 +103,7 @@ public class WorkItemFieldSetMapper implements FieldSetMapper<WorkItem>
         workItem.setShareDrive_OPER(fieldSet.readString( "ShareDrive_OPER" ));
         workItem.setShareMailbox_OPER(fieldSet.readString( "ShareMailbox_OPER" ));
         workItem.setEPIC_OPER(fieldSet.readString( "EPIC_OPER" ));
+        workItem.setSHCPRISM_OPER(fieldSet.readString( "SHCPRISM_OPER" ));
         workItem.setCerner_OPER(fieldSet.readString( "Cerner_OPER" ));
         workItem.setKronos_OPER(fieldSet.readString( "Kronos_OPER" ));
         workItem.setAccessHR_OPER(fieldSet.readString( "AccessHR_OPER" ));
@@ -137,6 +145,11 @@ public class WorkItemFieldSetMapper implements FieldSetMapper<WorkItem>
         workItem.setGetwell_OPER(fieldSet.readString( "Getwell_OPER" ));
         workItem.setGotoMeeting_OPER(fieldSet.readString( "GotoMeeting_OPER" ));
         workItem.setSNOW_OPER(fieldSet.readString( "SNOW_OPER" ));
+        workItem.setBabySentry_OPER(fieldSet.readString( "BabySentry_OPER" ));
+        workItem.setAvayaCMS_OPER(fieldSet.readString( "AvayaCMS_OPER" ));
+        workItem.setAGFA_OPER(fieldSet.readString( "AGFA_OPER" ));
+        workItem.setVoxida_OPER(fieldSet.readString( "Voxida_OPER" ));
+        workItem.setTwentytwoMile_OPER(fieldSet.readString( "TwentytwoMile_OPER" ));
 
         return workItem;
     }

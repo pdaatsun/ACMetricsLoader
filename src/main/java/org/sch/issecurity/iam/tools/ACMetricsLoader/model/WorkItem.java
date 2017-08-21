@@ -18,6 +18,7 @@ public class WorkItem
     String ShareDrive_UC;
     String ShareMailbox_UC;
     String EPIC_UC;
+    String SHCPRISM_UC;
     String Cerner_UC;
     String Kronos_UC;
     String AccessHR_UC;
@@ -59,6 +60,11 @@ public class WorkItem
     String Getwell_UC;
     String GotoMeeting_UC;
     String SNOW_UC;
+    String BabySentry_UC;
+    String AvayaCMS_UC;
+    String AGFA_UC;
+    String Voxida_UC;
+    String TwentytwoMile_UC;
     String AD_OPER;
     String Exchange_OPER;
     String Lync_OPER;
@@ -66,6 +72,7 @@ public class WorkItem
     String ShareDrive_OPER;
     String ShareMailbox_OPER;
     String EPIC_OPER;
+    String SHCPRISM_OPER;
     String Cerner_OPER;
     String Kronos_OPER;
     String AccessHR_OPER;
@@ -107,6 +114,11 @@ public class WorkItem
     String Getwell_OPER;
     String GotoMeeting_OPER;
     String SNOW_OPER;
+    String BabySentry_OPER;
+    String AvayaCMS_OPER;
+    String AGFA_OPER;
+    String Voxida_OPER;
+    String TwentytwoMile_OPER;
 
     public WorkItem() {
     }
@@ -189,6 +201,14 @@ public class WorkItem
 
     public void setEPIC_UC(String EPIC_UC) {
         this.EPIC_UC = EPIC_UC;
+    }
+
+    public String getSHCPRISM_UC() {
+        return SHCPRISM_UC;
+    }
+
+    public void setSHCPRISM_UC(String SHCPRISM_UC) {
+        this.SHCPRISM_UC = SHCPRISM_UC;
     }
 
     public String getCerner_UC() {
@@ -519,6 +539,46 @@ public class WorkItem
         this.SNOW_UC = SNOW_UC;
     }
 
+    public String getBabySentry_UC() {
+        return BabySentry_UC;
+    }
+
+    public void setBabySentry_UC(String BabySentry_UC) {
+        this.BabySentry_UC = BabySentry_UC;
+    }
+
+    public String getAvayaCMS_UC() {
+        return AvayaCMS_UC;
+    }
+
+    public void setAvayaCMS_UC(String avayaCMS_UC) {
+        AvayaCMS_UC = avayaCMS_UC;
+    }
+
+    public String getAGFA_UC() {
+        return AGFA_UC;
+    }
+
+    public void setAGFA_UC(String AGFA_UC) {
+        this.AGFA_UC = AGFA_UC;
+    }
+
+    public String getVoxida_UC() {
+        return Voxida_UC;
+    }
+
+    public void setVoxida_UC(String voxida_UC) {
+        Voxida_UC = voxida_UC;
+    }
+
+    public String getTwentytwoMile_UC() {
+        return TwentytwoMile_UC;
+    }
+
+    public void setTwentytwoMile_UC(String twentytwoMile_UC) {
+        TwentytwoMile_UC = twentytwoMile_UC;
+    }
+
     public String getAD_OPER() {
         return AD_OPER;
     }
@@ -573,6 +633,14 @@ public class WorkItem
 
     public void setEPIC_OPER(String EPIC_OPER) {
         this.EPIC_OPER = EPIC_OPER;
+    }
+
+    public String getSHCPRISM_OPER() {
+        return SHCPRISM_OPER;
+    }
+
+    public void setSHCPRISM_OPER(String SHCPRISM_OPER) {
+        this.SHCPRISM_OPER = SHCPRISM_OPER;
     }
 
     public String getCerner_OPER() {
@@ -903,265 +971,43 @@ public class WorkItem
         this.SNOW_OPER = SNOW_OPER;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        WorkItem workItem = (WorkItem) o;
-
-        if (!tranDate.equals(workItem.tranDate)) return false;
-        if (!analystFirstName.equals(workItem.analystFirstName)) return false;
-        if (SNOWID != null ? !SNOWID.equals(workItem.SNOWID) : workItem.SNOWID != null) return false;
-        if (AD_UC != null ? !AD_UC.equals(workItem.AD_UC) : workItem.AD_UC != null) return false;
-        if (Exchange_UC != null ? !Exchange_UC.equals(workItem.Exchange_UC) : workItem.Exchange_UC != null)
-            return false;
-        if (Lync_UC != null ? !Lync_UC.equals(workItem.Lync_UC) : workItem.Lync_UC != null) return false;
-        if (Box_UC != null ? !Box_UC.equals(workItem.Box_UC) : workItem.Box_UC != null) return false;
-        if (ShareDrive_UC != null ? !ShareDrive_UC.equals(workItem.ShareDrive_UC) : workItem.ShareDrive_UC != null)
-            return false;
-        if (ShareMailbox_UC != null ? !ShareMailbox_UC.equals(workItem.ShareMailbox_UC) : workItem.ShareMailbox_UC != null)
-            return false;
-        if (EPIC_UC != null ? !EPIC_UC.equals(workItem.EPIC_UC) : workItem.EPIC_UC != null) return false;
-        if (Cerner_UC != null ? !Cerner_UC.equals(workItem.Cerner_UC) : workItem.Cerner_UC != null) return false;
-        if (Kronos_UC != null ? !Kronos_UC.equals(workItem.Kronos_UC) : workItem.Kronos_UC != null) return false;
-        if (AccessHR_UC != null ? !AccessHR_UC.equals(workItem.AccessHR_UC) : workItem.AccessHR_UC != null)
-            return false;
-        if (FSCM_UC != null ? !FSCM_UC.equals(workItem.FSCM_UC) : workItem.FSCM_UC != null) return false;
-        if (OnBase_UC != null ? !OnBase_UC.equals(workItem.OnBase_UC) : workItem.OnBase_UC != null) return false;
-        if (MDPortal_UC != null ? !MDPortal_UC.equals(workItem.MDPortal_UC) : workItem.MDPortal_UC != null)
-            return false;
-        if (Haiku_UC != null ? !Haiku_UC.equals(workItem.Haiku_UC) : workItem.Haiku_UC != null) return false;
-        if (Voalte_UC != null ? !Voalte_UC.equals(workItem.Voalte_UC) : workItem.Voalte_UC != null) return false;
-        if (GRASP_UC != null ? !GRASP_UC.equals(workItem.GRASP_UC) : workItem.GRASP_UC != null) return false;
-        if (Passport_UC != null ? !Passport_UC.equals(workItem.Passport_UC) : workItem.Passport_UC != null)
-            return false;
-        if (Payor_UC != null ? !Payor_UC.equals(workItem.Payor_UC) : workItem.Payor_UC != null) return false;
-        if (Analytics_UC != null ? !Analytics_UC.equals(workItem.Analytics_UC) : workItem.Analytics_UC != null)
-            return false;
-        if (FundsFlow_UC != null ? !FundsFlow_UC.equals(workItem.FundsFlow_UC) : workItem.FundsFlow_UC != null)
-            return false;
-        if (Lane_UC != null ? !Lane_UC.equals(workItem.Lane_UC) : workItem.Lane_UC != null) return false;
-        if (FANSOS_UC != null ? !FANSOS_UC.equals(workItem.FANSOS_UC) : workItem.FANSOS_UC != null) return false;
-        if (Zirmed_UC != null ? !Zirmed_UC.equals(workItem.Zirmed_UC) : workItem.Zirmed_UC != null) return false;
-        if (Emdeon_UC != null ? !Emdeon_UC.equals(workItem.Emdeon_UC) : workItem.Emdeon_UC != null) return false;
-        if (LogMeIn_UC != null ? !LogMeIn_UC.equals(workItem.LogMeIn_UC) : workItem.LogMeIn_UC != null) return false;
-        if (ResQ_UC != null ? !ResQ_UC.equals(workItem.ResQ_UC) : workItem.ResQ_UC != null) return false;
-        if (VersusRTLS_UC != null ? !VersusRTLS_UC.equals(workItem.VersusRTLS_UC) : workItem.VersusRTLS_UC != null)
-            return false;
-        if (Meditech_UC != null ? !Meditech_UC.equals(workItem.Meditech_UC) : workItem.Meditech_UC != null)
-            return false;
-        if (MCCM_UC != null ? !MCCM_UC.equals(workItem.MCCM_UC) : workItem.MCCM_UC != null) return false;
-        if (ExercisePro_UC != null ? !ExercisePro_UC.equals(workItem.ExercisePro_UC) : workItem.ExercisePro_UC != null)
-            return false;
-        if (iCares_UC != null ? !iCares_UC.equals(workItem.iCares_UC) : workItem.iCares_UC != null) return false;
-        if (Connexall_UC != null ? !Connexall_UC.equals(workItem.Connexall_UC) : workItem.Connexall_UC != null)
-            return false;
-        if (Vocera_UC != null ? !Vocera_UC.equals(workItem.Vocera_UC) : workItem.Vocera_UC != null) return false;
-        if (MyChild_UC != null ? !MyChild_UC.equals(workItem.MyChild_UC) : workItem.MyChild_UC != null) return false;
-        if (Qualtrics_UC != null ? !Qualtrics_UC.equals(workItem.Qualtrics_UC) : workItem.Qualtrics_UC != null)
-            return false;
-        if (Syngo_UC != null ? !Syngo_UC.equals(workItem.Syngo_UC) : workItem.Syngo_UC != null) return false;
-        if (Teamsite_UC != null ? !Teamsite_UC.equals(workItem.Teamsite_UC) : workItem.Teamsite_UC != null)
-            return false;
-        if (Wordpress_UC != null ? !Wordpress_UC.equals(workItem.Wordpress_UC) : workItem.Wordpress_UC != null)
-            return false;
-        if (Server_UC != null ? !Server_UC.equals(workItem.Server_UC) : workItem.Server_UC != null) return false;
-        if (TrackCore_UC != null ? !TrackCore_UC.equals(workItem.TrackCore_UC) : workItem.TrackCore_UC != null)
-            return false;
-        if (VHI_UC != null ? !VHI_UC.equals(workItem.VHI_UC) : workItem.VHI_UC != null) return false;
-        if (SharePoint_UC != null ? !SharePoint_UC.equals(workItem.SharePoint_UC) : workItem.SharePoint_UC != null)
-            return false;
-        if (TSI_UC != null ? !TSI_UC.equals(workItem.TSI_UC) : workItem.TSI_UC != null) return false;
-        if (EPSi_UC != null ? !EPSi_UC.equals(workItem.EPSi_UC) : workItem.EPSi_UC != null) return false;
-        if (Tableau_UC != null ? !Tableau_UC.equals(workItem.Tableau_UC) : workItem.Tableau_UC != null) return false;
-        if (Getwell_UC != null ? !Getwell_UC.equals(workItem.Getwell_UC) : workItem.Getwell_UC != null) return false;
-        if (GotoMeeting_UC != null ? !GotoMeeting_UC.equals(workItem.GotoMeeting_UC) : workItem.GotoMeeting_UC != null)
-            return false;
-        if (SNOW_UC != null ? !SNOW_UC.equals(workItem.SNOW_UC) : workItem.SNOW_UC != null) return false;
-        if (AD_OPER != null ? !AD_OPER.equals(workItem.AD_OPER) : workItem.AD_OPER != null) return false;
-        if (Exchange_OPER != null ? !Exchange_OPER.equals(workItem.Exchange_OPER) : workItem.Exchange_OPER != null)
-            return false;
-        if (Lync_OPER != null ? !Lync_OPER.equals(workItem.Lync_OPER) : workItem.Lync_OPER != null) return false;
-        if (Box_OPER != null ? !Box_OPER.equals(workItem.Box_OPER) : workItem.Box_OPER != null) return false;
-        if (ShareDrive_OPER != null ? !ShareDrive_OPER.equals(workItem.ShareDrive_OPER) : workItem.ShareDrive_OPER != null)
-            return false;
-        if (ShareMailbox_OPER != null ? !ShareMailbox_OPER.equals(workItem.ShareMailbox_OPER) : workItem.ShareMailbox_OPER != null)
-            return false;
-        if (EPIC_OPER != null ? !EPIC_OPER.equals(workItem.EPIC_OPER) : workItem.EPIC_OPER != null) return false;
-        if (Cerner_OPER != null ? !Cerner_OPER.equals(workItem.Cerner_OPER) : workItem.Cerner_OPER != null)
-            return false;
-        if (Kronos_OPER != null ? !Kronos_OPER.equals(workItem.Kronos_OPER) : workItem.Kronos_OPER != null)
-            return false;
-        if (AccessHR_OPER != null ? !AccessHR_OPER.equals(workItem.AccessHR_OPER) : workItem.AccessHR_OPER != null)
-            return false;
-        if (FSCM_OPER != null ? !FSCM_OPER.equals(workItem.FSCM_OPER) : workItem.FSCM_OPER != null) return false;
-        if (OnBase_OPER != null ? !OnBase_OPER.equals(workItem.OnBase_OPER) : workItem.OnBase_OPER != null)
-            return false;
-        if (MDPortal_OPER != null ? !MDPortal_OPER.equals(workItem.MDPortal_OPER) : workItem.MDPortal_OPER != null)
-            return false;
-        if (Haiku_OPER != null ? !Haiku_OPER.equals(workItem.Haiku_OPER) : workItem.Haiku_OPER != null) return false;
-        if (Voalte_OPER != null ? !Voalte_OPER.equals(workItem.Voalte_OPER) : workItem.Voalte_OPER != null)
-            return false;
-        if (GRASP_OPER != null ? !GRASP_OPER.equals(workItem.GRASP_OPER) : workItem.GRASP_OPER != null) return false;
-        if (Passport_OPER != null ? !Passport_OPER.equals(workItem.Passport_OPER) : workItem.Passport_OPER != null)
-            return false;
-        if (Payor_OPER != null ? !Payor_OPER.equals(workItem.Payor_OPER) : workItem.Payor_OPER != null) return false;
-        if (Analytics_OPER != null ? !Analytics_OPER.equals(workItem.Analytics_OPER) : workItem.Analytics_OPER != null)
-            return false;
-        if (FundsFlow_OPER != null ? !FundsFlow_OPER.equals(workItem.FundsFlow_OPER) : workItem.FundsFlow_OPER != null)
-            return false;
-        if (Lane_OPER != null ? !Lane_OPER.equals(workItem.Lane_OPER) : workItem.Lane_OPER != null) return false;
-        if (FANSOS_OPER != null ? !FANSOS_OPER.equals(workItem.FANSOS_OPER) : workItem.FANSOS_OPER != null)
-            return false;
-        if (Zirmed_OPER != null ? !Zirmed_OPER.equals(workItem.Zirmed_OPER) : workItem.Zirmed_OPER != null)
-            return false;
-        if (Emdeon_OPER != null ? !Emdeon_OPER.equals(workItem.Emdeon_OPER) : workItem.Emdeon_OPER != null)
-            return false;
-        if (LogMeIn_OPER != null ? !LogMeIn_OPER.equals(workItem.LogMeIn_OPER) : workItem.LogMeIn_OPER != null)
-            return false;
-        if (ResQ_OPER != null ? !ResQ_OPER.equals(workItem.ResQ_OPER) : workItem.ResQ_OPER != null) return false;
-        if (VersusRTLS_OPER != null ? !VersusRTLS_OPER.equals(workItem.VersusRTLS_OPER) : workItem.VersusRTLS_OPER != null)
-            return false;
-        if (Meditech_OPER != null ? !Meditech_OPER.equals(workItem.Meditech_OPER) : workItem.Meditech_OPER != null)
-            return false;
-        if (MCCM_OPER != null ? !MCCM_OPER.equals(workItem.MCCM_OPER) : workItem.MCCM_OPER != null) return false;
-        if (ExercisePro_OPER != null ? !ExercisePro_OPER.equals(workItem.ExercisePro_OPER) : workItem.ExercisePro_OPER != null)
-            return false;
-        if (iCares_OPER != null ? !iCares_OPER.equals(workItem.iCares_OPER) : workItem.iCares_OPER != null)
-            return false;
-        if (Connexall_OPER != null ? !Connexall_OPER.equals(workItem.Connexall_OPER) : workItem.Connexall_OPER != null)
-            return false;
-        if (Vocera_OPER != null ? !Vocera_OPER.equals(workItem.Vocera_OPER) : workItem.Vocera_OPER != null)
-            return false;
-        if (MyChild_OPER != null ? !MyChild_OPER.equals(workItem.MyChild_OPER) : workItem.MyChild_OPER != null)
-            return false;
-        if (Qualtrics_OPER != null ? !Qualtrics_OPER.equals(workItem.Qualtrics_OPER) : workItem.Qualtrics_OPER != null)
-            return false;
-        if (Syngo_OPER != null ? !Syngo_OPER.equals(workItem.Syngo_OPER) : workItem.Syngo_OPER != null) return false;
-        if (Teamsite_OPER != null ? !Teamsite_OPER.equals(workItem.Teamsite_OPER) : workItem.Teamsite_OPER != null)
-            return false;
-        if (Wordpress_OPER != null ? !Wordpress_OPER.equals(workItem.Wordpress_OPER) : workItem.Wordpress_OPER != null)
-            return false;
-        if (Server_OPER != null ? !Server_OPER.equals(workItem.Server_OPER) : workItem.Server_OPER != null)
-            return false;
-        if (TrackCore_OPER != null ? !TrackCore_OPER.equals(workItem.TrackCore_OPER) : workItem.TrackCore_OPER != null)
-            return false;
-        if (VHI_OPER != null ? !VHI_OPER.equals(workItem.VHI_OPER) : workItem.VHI_OPER != null) return false;
-        if (SharePoint_OPER != null ? !SharePoint_OPER.equals(workItem.SharePoint_OPER) : workItem.SharePoint_OPER != null)
-            return false;
-        if (TSI_OPER != null ? !TSI_OPER.equals(workItem.TSI_OPER) : workItem.TSI_OPER != null) return false;
-        if (EPSi_OPER != null ? !EPSi_OPER.equals(workItem.EPSi_OPER) : workItem.EPSi_OPER != null) return false;
-        if (Tableau_OPER != null ? !Tableau_OPER.equals(workItem.Tableau_OPER) : workItem.Tableau_OPER != null)
-            return false;
-        if (Getwell_OPER != null ? !Getwell_OPER.equals(workItem.Getwell_OPER) : workItem.Getwell_OPER != null)
-            return false;
-        if (GotoMeeting_OPER != null ? !GotoMeeting_OPER.equals(workItem.GotoMeeting_OPER) : workItem.GotoMeeting_OPER != null)
-            return false;
-        return SNOW_OPER != null ? SNOW_OPER.equals(workItem.SNOW_OPER) : workItem.SNOW_OPER == null;
+    public String getBabySentry_OPER() {
+        return BabySentry_OPER;
     }
 
-    @Override
-    public int hashCode() {
-        int result = tranDate.hashCode();
-        result = 31 * result + analystFirstName.hashCode();
-        result = 31 * result + (SNOWID != null ? SNOWID.hashCode() : 0);
-        result = 31 * result + (AD_UC != null ? AD_UC.hashCode() : 0);
-        result = 31 * result + (Exchange_UC != null ? Exchange_UC.hashCode() : 0);
-        result = 31 * result + (Lync_UC != null ? Lync_UC.hashCode() : 0);
-        result = 31 * result + (Box_UC != null ? Box_UC.hashCode() : 0);
-        result = 31 * result + (ShareDrive_UC != null ? ShareDrive_UC.hashCode() : 0);
-        result = 31 * result + (ShareMailbox_UC != null ? ShareMailbox_UC.hashCode() : 0);
-        result = 31 * result + (EPIC_UC != null ? EPIC_UC.hashCode() : 0);
-        result = 31 * result + (Cerner_UC != null ? Cerner_UC.hashCode() : 0);
-        result = 31 * result + (Kronos_UC != null ? Kronos_UC.hashCode() : 0);
-        result = 31 * result + (AccessHR_UC != null ? AccessHR_UC.hashCode() : 0);
-        result = 31 * result + (FSCM_UC != null ? FSCM_UC.hashCode() : 0);
-        result = 31 * result + (OnBase_UC != null ? OnBase_UC.hashCode() : 0);
-        result = 31 * result + (MDPortal_UC != null ? MDPortal_UC.hashCode() : 0);
-        result = 31 * result + (Haiku_UC != null ? Haiku_UC.hashCode() : 0);
-        result = 31 * result + (Voalte_UC != null ? Voalte_UC.hashCode() : 0);
-        result = 31 * result + (GRASP_UC != null ? GRASP_UC.hashCode() : 0);
-        result = 31 * result + (Passport_UC != null ? Passport_UC.hashCode() : 0);
-        result = 31 * result + (Payor_UC != null ? Payor_UC.hashCode() : 0);
-        result = 31 * result + (Analytics_UC != null ? Analytics_UC.hashCode() : 0);
-        result = 31 * result + (FundsFlow_UC != null ? FundsFlow_UC.hashCode() : 0);
-        result = 31 * result + (Lane_UC != null ? Lane_UC.hashCode() : 0);
-        result = 31 * result + (FANSOS_UC != null ? FANSOS_UC.hashCode() : 0);
-        result = 31 * result + (Zirmed_UC != null ? Zirmed_UC.hashCode() : 0);
-        result = 31 * result + (Emdeon_UC != null ? Emdeon_UC.hashCode() : 0);
-        result = 31 * result + (LogMeIn_UC != null ? LogMeIn_UC.hashCode() : 0);
-        result = 31 * result + (ResQ_UC != null ? ResQ_UC.hashCode() : 0);
-        result = 31 * result + (VersusRTLS_UC != null ? VersusRTLS_UC.hashCode() : 0);
-        result = 31 * result + (Meditech_UC != null ? Meditech_UC.hashCode() : 0);
-        result = 31 * result + (MCCM_UC != null ? MCCM_UC.hashCode() : 0);
-        result = 31 * result + (ExercisePro_UC != null ? ExercisePro_UC.hashCode() : 0);
-        result = 31 * result + (iCares_UC != null ? iCares_UC.hashCode() : 0);
-        result = 31 * result + (Connexall_UC != null ? Connexall_UC.hashCode() : 0);
-        result = 31 * result + (Vocera_UC != null ? Vocera_UC.hashCode() : 0);
-        result = 31 * result + (MyChild_UC != null ? MyChild_UC.hashCode() : 0);
-        result = 31 * result + (Qualtrics_UC != null ? Qualtrics_UC.hashCode() : 0);
-        result = 31 * result + (Syngo_UC != null ? Syngo_UC.hashCode() : 0);
-        result = 31 * result + (Teamsite_UC != null ? Teamsite_UC.hashCode() : 0);
-        result = 31 * result + (Wordpress_UC != null ? Wordpress_UC.hashCode() : 0);
-        result = 31 * result + (Server_UC != null ? Server_UC.hashCode() : 0);
-        result = 31 * result + (TrackCore_UC != null ? TrackCore_UC.hashCode() : 0);
-        result = 31 * result + (VHI_UC != null ? VHI_UC.hashCode() : 0);
-        result = 31 * result + (SharePoint_UC != null ? SharePoint_UC.hashCode() : 0);
-        result = 31 * result + (TSI_UC != null ? TSI_UC.hashCode() : 0);
-        result = 31 * result + (EPSi_UC != null ? EPSi_UC.hashCode() : 0);
-        result = 31 * result + (Tableau_UC != null ? Tableau_UC.hashCode() : 0);
-        result = 31 * result + (Getwell_UC != null ? Getwell_UC.hashCode() : 0);
-        result = 31 * result + (GotoMeeting_UC != null ? GotoMeeting_UC.hashCode() : 0);
-        result = 31 * result + (SNOW_UC != null ? SNOW_UC.hashCode() : 0);
-        result = 31 * result + (AD_OPER != null ? AD_OPER.hashCode() : 0);
-        result = 31 * result + (Exchange_OPER != null ? Exchange_OPER.hashCode() : 0);
-        result = 31 * result + (Lync_OPER != null ? Lync_OPER.hashCode() : 0);
-        result = 31 * result + (Box_OPER != null ? Box_OPER.hashCode() : 0);
-        result = 31 * result + (ShareDrive_OPER != null ? ShareDrive_OPER.hashCode() : 0);
-        result = 31 * result + (ShareMailbox_OPER != null ? ShareMailbox_OPER.hashCode() : 0);
-        result = 31 * result + (EPIC_OPER != null ? EPIC_OPER.hashCode() : 0);
-        result = 31 * result + (Cerner_OPER != null ? Cerner_OPER.hashCode() : 0);
-        result = 31 * result + (Kronos_OPER != null ? Kronos_OPER.hashCode() : 0);
-        result = 31 * result + (AccessHR_OPER != null ? AccessHR_OPER.hashCode() : 0);
-        result = 31 * result + (FSCM_OPER != null ? FSCM_OPER.hashCode() : 0);
-        result = 31 * result + (OnBase_OPER != null ? OnBase_OPER.hashCode() : 0);
-        result = 31 * result + (MDPortal_OPER != null ? MDPortal_OPER.hashCode() : 0);
-        result = 31 * result + (Haiku_OPER != null ? Haiku_OPER.hashCode() : 0);
-        result = 31 * result + (Voalte_OPER != null ? Voalte_OPER.hashCode() : 0);
-        result = 31 * result + (GRASP_OPER != null ? GRASP_OPER.hashCode() : 0);
-        result = 31 * result + (Passport_OPER != null ? Passport_OPER.hashCode() : 0);
-        result = 31 * result + (Payor_OPER != null ? Payor_OPER.hashCode() : 0);
-        result = 31 * result + (Analytics_OPER != null ? Analytics_OPER.hashCode() : 0);
-        result = 31 * result + (FundsFlow_OPER != null ? FundsFlow_OPER.hashCode() : 0);
-        result = 31 * result + (Lane_OPER != null ? Lane_OPER.hashCode() : 0);
-        result = 31 * result + (FANSOS_OPER != null ? FANSOS_OPER.hashCode() : 0);
-        result = 31 * result + (Zirmed_OPER != null ? Zirmed_OPER.hashCode() : 0);
-        result = 31 * result + (Emdeon_OPER != null ? Emdeon_OPER.hashCode() : 0);
-        result = 31 * result + (LogMeIn_OPER != null ? LogMeIn_OPER.hashCode() : 0);
-        result = 31 * result + (ResQ_OPER != null ? ResQ_OPER.hashCode() : 0);
-        result = 31 * result + (VersusRTLS_OPER != null ? VersusRTLS_OPER.hashCode() : 0);
-        result = 31 * result + (Meditech_OPER != null ? Meditech_OPER.hashCode() : 0);
-        result = 31 * result + (MCCM_OPER != null ? MCCM_OPER.hashCode() : 0);
-        result = 31 * result + (ExercisePro_OPER != null ? ExercisePro_OPER.hashCode() : 0);
-        result = 31 * result + (iCares_OPER != null ? iCares_OPER.hashCode() : 0);
-        result = 31 * result + (Connexall_OPER != null ? Connexall_OPER.hashCode() : 0);
-        result = 31 * result + (Vocera_OPER != null ? Vocera_OPER.hashCode() : 0);
-        result = 31 * result + (MyChild_OPER != null ? MyChild_OPER.hashCode() : 0);
-        result = 31 * result + (Qualtrics_OPER != null ? Qualtrics_OPER.hashCode() : 0);
-        result = 31 * result + (Syngo_OPER != null ? Syngo_OPER.hashCode() : 0);
-        result = 31 * result + (Teamsite_OPER != null ? Teamsite_OPER.hashCode() : 0);
-        result = 31 * result + (Wordpress_OPER != null ? Wordpress_OPER.hashCode() : 0);
-        result = 31 * result + (Server_OPER != null ? Server_OPER.hashCode() : 0);
-        result = 31 * result + (TrackCore_OPER != null ? TrackCore_OPER.hashCode() : 0);
-        result = 31 * result + (VHI_OPER != null ? VHI_OPER.hashCode() : 0);
-        result = 31 * result + (SharePoint_OPER != null ? SharePoint_OPER.hashCode() : 0);
-        result = 31 * result + (TSI_OPER != null ? TSI_OPER.hashCode() : 0);
-        result = 31 * result + (EPSi_OPER != null ? EPSi_OPER.hashCode() : 0);
-        result = 31 * result + (Tableau_OPER != null ? Tableau_OPER.hashCode() : 0);
-        result = 31 * result + (Getwell_OPER != null ? Getwell_OPER.hashCode() : 0);
-        result = 31 * result + (GotoMeeting_OPER != null ? GotoMeeting_OPER.hashCode() : 0);
-        result = 31 * result + (SNOW_OPER != null ? SNOW_OPER.hashCode() : 0);
-        return result;
+    public void setBabySentry_OPER(String BabySentry_OPER) {
+        this.BabySentry_OPER = BabySentry_OPER;
+    }
+
+    public String getAvayaCMS_OPER() {
+        return AvayaCMS_OPER;
+    }
+
+    public void setAvayaCMS_OPER(String avayaCMS_OPER) {
+        AvayaCMS_OPER = avayaCMS_OPER;
+    }
+
+    public String getAGFA_OPER() {
+        return AGFA_OPER;
+    }
+
+    public void setAGFA_OPER(String AGFA_OPER) {
+        this.AGFA_OPER = AGFA_OPER;
+    }
+
+    public String getVoxida_OPER() {
+        return Voxida_OPER;
+    }
+
+    public void setVoxida_OPER(String voxida_OPER) {
+        Voxida_OPER = voxida_OPER;
+    }
+
+    public String getTwentytwoMile_OPER() {
+        return TwentytwoMile_OPER;
+    }
+
+    public void setTwentytwoMile_OPER(String twentytwoMile_OPER) {
+        TwentytwoMile_OPER = twentytwoMile_OPER;
     }
 }

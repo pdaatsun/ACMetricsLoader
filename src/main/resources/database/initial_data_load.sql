@@ -110,3 +110,11 @@ INSERT INTO dbo.Application (appCode, appName) VALUES ('Tableau', 'Tableau');
 INSERT INTO dbo.Application (appCode, appName) VALUES ('Getwell', 'Getwell');
 INSERT INTO dbo.Application (appCode, appName) VALUES ('GotoMeeting', 'Goto Meeting');
 INSERT INTO dbo.Application (appCode, appName) VALUES ('SNOW', 'Service Now');
+
+INSERT INTO dbo.Application (appCode, appName) VALUES ('SHCPRISM', 'SHC PRISM');
+INSERT INTO dbo.Application (appCode, appName) VALUES ('BabySentry', 'BabySentry');
+
+INSERT INTO dbo.Application (appCode, appName) VALUES ('AvayaCMS', 'Avaya CMS');
+INSERT INTO dbo.Application (appCode, appName) VALUES ('AGFA', 'AGFA/PACS');
+INSERT INTO dbo.Application (appCode, appName) VALUES ('Voxida', 'Voxida');
+INSERT INTO dbo.Application (appCode, appName) VALUES ('TwentytwoMile', 'TwentytwoMile');
