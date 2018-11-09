@@ -1,22 +1,27 @@
 INSERT INTO dbo.Analyst
-(firstName, lastName, employeeID, email, status)
+(firstName, lastName, employeeID, email, status, adID, userRole)
 VALUES
-('Xiaofang', 'Chen', '402515', 'XiChen@stanfordchildrens.org', 'Active');
+('Xiaofang', 'Chen', '402515', 'XiChen@stanfordchildrens.org', 'Active', 'XiChen', 'admin');
 
 INSERT INTO dbo.Analyst
-(firstName, lastName, employeeID, email, status)
+(firstName, lastName, employeeID, email, status, adID, userRole)
 VALUES
-('John', 'Yu', '402649', 'JohYu@stanfordchildrens.org', 'Active');
+('John', 'Yu', '402649', 'JohYu@stanfordchildrens.org', 'Active', 'JohYu', 'user');
 
 INSERT INTO dbo.Analyst
-(firstName, lastName, employeeID, email, status)
+(firstName, lastName, employeeID, email, status, adID, userRole)
 VALUES
-('April', 'Sims', '402627', 'ASims@stanfordchildrens.org', 'Active');
+('April', 'Sims', '402627', 'ASims@stanfordchildrens.org', 'Active', 'ASims', 'user');
 
 INSERT INTO dbo.Analyst
-(firstName, lastName, employeeID, email, status)
+(firstName, lastName, employeeID, email, status, adID, userRole)
 VALUES
-('Henry', 'Stepanian', '900019', 'HStepanian@stanfordchildrens.org', 'Active');
+('Nai', 'Saelee', '900646', 'NSaelee@stanfordchildrens.org', 'Active', 'NSaelee', 'user');
+
+INSERT INTO dbo.Analyst
+(firstName, lastName, employeeID, email, status, adID, userRole)
+VALUES
+('Henry', 'Stepanian', '900019', 'HStepanian@stanfordchildrens.org', 'Inactive', 'HStepanian', 'user');
 
 INSERT INTO dbo.Operation
 (operationType, operationDesc)
